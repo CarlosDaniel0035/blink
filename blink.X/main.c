@@ -1,7 +1,13 @@
 #include "config.h"
-#include <avr/io.h>
+#include <xc.h>
 
-int main(void) 
+void main(void) 
 {
-    return;
+    while(1)
+    TRISDbits.TRISD7 = 1;
+}
+void main (void)
+{
+    PORTDbits.RD7 = 1;
+    PORTDbits.RD7 = 0;
 }
